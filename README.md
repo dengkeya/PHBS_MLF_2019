@@ -1,4 +1,7 @@
+
 # PHBS_MLF_2019_project
-final_project
-(～￣▽￣)～
-Keya Deng 1901212571
+final_project(～￣▽￣)～  
+## 0.Group Infomation
+Student ID  | Student Name |  Github ID 
+ ---- | ----- | ------
+1901212571| Keya Deng| dengkeya
