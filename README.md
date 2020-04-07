@@ -43,4 +43,16 @@ Historical payment record | How much the client has paied in each month (April t
 
 ## 1. Background
 
-互联网从急速扩张时期开始慢慢过渡到精准营销的时代，如何对使用者进行用户画像，针对每个用户
+To develop credit business, not only do we need to assess the risk level of customers, but also need to forecast the loan demand of customers and make a good match between the amount of funds and the demand to improve the utilization rate of funds. JD can make full use of its transaction data as an e-commerce platform to describe user portraits, so that they can provide customized service for each user. Our data set from https://www.pkbigdata.com/common/cmpt/京东金融全球数据探索者大赛_赛体与数据.html
+
+## 2. Data Description
+
+The entire dataset consists of five files, each containing the type of information characteristic. There are 8,027 attributes in the entire data set, more than 90,000 users in total, and only about 20,000 users will borrow money every month. So the whole data set is very unbalanced. This problem needs to be dealt with by us.
+
+| Data file name | Type of features                                             |
+| -------------- | ------------------------------------------------------------ |
+| t_user         | users' ID, age, sex, user activation date, initial loan limit |
+| t_order        | users' ID, purchase time, price, buying quality, category, discount |
+| t_click        | users' ID, click time, page user clicking, params of page    |
+| t_loan         | users' ID, loan time, loan amount, repayment periods         |
+| t_loan_sum     | users' ID, month, loan sum                                   |
