@@ -10,11 +10,11 @@ Student ID  | Student Name |  Github ID
 1901212615| Liu Xin | [rebeccaliu922](https://github.com/rebeccaliu922)
 ## **Dear Prof Choi,** 
 
-Now we have a problem. We have two data sets to choose, but it is difficult to make up our mind. We want to ask your advice!
+We are facing a problem. We have two data sets to choose, but it is difficult to make up our mind. We want to ask for your advice!  
 
-The first choice is a data set related to the historical credit history and historical billing data of credit card users. We want to use this data set to predict the repayment status of users, so as to better grasp the credit risk
+The first choice is about predicting the default of credit card. The dataset is about historical credit records,  bill data and payment records. We want to use this data set to predict the repayment status of users, so as to better grasp the credit risk. This dataset is quite direct for Machine Learning. We can practice what we have learned directly. However, we are afraid that this dataset is too normal.  
 
-The second choice is about users' order information, clicking page information  provided by an e-commerce platform from August to November. This e-commerce platform provides a certain amount of consumption loan like installment. We want to help the platform predict December loan demand information of each user, and provide users with more accurate customized loan business.
+The second choice is from JD finance, to help them predict the borrow demand of customers so that they can match the amount of funds and demand to improve the utilization.  The dataset is about basic user information, mobile behavior data, shopping history and historical lending information. We want to help JD finance predict December loan demand information of each user and provide users with more accurate customized loan business. This dataset is a little bit complex. It may involve some new methods that we have not covered in the class. But we are afraid that we cannot handle it in the limited time >_<.
 
 
 
