@@ -55,6 +55,8 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 	    <td >Amount of bill statement (NT dollar)</td>
 	</tr>
 </table>  
+
+
 ## 3. Our Aim
 
 * The model is built based on the existing basic population attribute data, historical credit history, historical billing data and historical repayment data. According to the model, it can predict whether the credit card holder will repay the money on time next month. Essentially, it is a typical dichotomous problem.
