@@ -45,9 +45,14 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 	    <td>Years</td>
 	</tr>
 	<tr>
-	    <td >maxlength</td>
-	    <td >正整数</td>
-	    <td >控件允许输入的最多字符</td>
+	    <td >Historical Credit Record</td>
+	    <td >PAY_0, ..., PAY_6 </td>
+	    <td >History of past payment :<br /> -N = Pay N months early; <br />0 = Pay on time<br />N = Payment delay for N month<br />N = 1,2, ..., 6 </td>
+	</tr>
+	<tr>
+	    <td >Historical Bill Amount</td>
+	    <td >BILL_AMT1,..., BILL_AMT6 </td>
+	    <td >Amount of bill statement (NT dollar)</td>
 	</tr>
 </table>
 
