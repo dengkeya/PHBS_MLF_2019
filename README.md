@@ -19,9 +19,9 @@ Categories                |    Features| Details
 ---------------------     | ----------------------|---------------------     
 Credit Card Information   | Credit Limit | Amount of the given credit (NT dollar) 
 Indentity Information     | Gender | 1 = male; 2 = female 
-                          | Education                | 1 = graduate school; 2 = university; 3 = high school; 4 = others 
-                          | Marriage                 | 1 = married; 2 = single; 3 = others 
-                          | Age                      | Years 
+ Indentity Information    | Education                | 1 = graduate school; 2 = university; 3 = high school; 4 = others 
+ Indentity Information    | Marriage                 | 1 = married; 2 = single; 3 = others 
+ Indentity Information    | Age                      | Years 
 Historical Credit Record | PAY_0, ..., PAY_6 | History of past payment :<br /> -N = Pay N months early; <br />0 = Pay on time<br />N = Payment delay for N month<br />N = 1,2, ..., 6 
  Historical Bill Amount   | BILL_AMT1,..., BILL_AMT6 | Amount of bill statement (NT dollar). 
 ## 3. Our Aim
