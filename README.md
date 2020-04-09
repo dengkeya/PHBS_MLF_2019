@@ -54,6 +54,11 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 	    <td >BILL_AMT1,..., BILL_AMT6 </td>
 	    <td >Amount of bill statement (NT dollar)</td>
 	</tr>
+	<tr>
+	    <td >PAY_AMT1, ..., PAY_AMT6</td>
+	    <td >BILL_AMT1,..., BILL_AMT6 </td>
+	    <td >Amount of Previous Payment (NT dollar)</td>
+	</tr>
 </table>  
 
 
