@@ -54,17 +54,7 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 	    <td >BILL_AMT1,..., BILL_AMT6 </td>
 	    <td >Amount of bill statement (NT dollar)</td>
 	</tr>
-</table>
-
-Categories                |    Features| Details 
----------------------     | ----------------------|---------------------     
-Credit Card Information   | Credit Limit | Amount of the given credit (NT dollar) 
-Indentity Information     | Gender | 1 = male; 2 = female 
- Indentity Information    | Education                | 1 = graduate school; 2 = university; 3 = high school; 4 = others 
- Indentity Information    | Marriage                 | 1 = married; 2 = single; 3 = others 
- Indentity Information    | Age                      | Years 
-Historical Credit Record | PAY_0, ..., PAY_6 | History of past payment :<br /> -N = Pay N months early; <br />0 = Pay on time<br />N = Payment delay for N month<br />N = 1,2, ..., 6 
- Historical Bill Amount   | BILL_AMT1,..., BILL_AMT6 | Amount of bill statement (NT dollar). 
+</table>  
 ## 3. Our Aim
 
 * The model is built based on the existing basic population attribute data, historical credit history, historical billing data and historical repayment data. According to the model, it can predict whether the credit card holder will repay the money on time next month. Essentially, it is a typical dichotomous problem.
