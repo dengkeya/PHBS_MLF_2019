@@ -1,5 +1,5 @@
 
-# PHBS_MLF_2019_project
+# Predictig Credit Card Users' Repayment Behavior
 final_project(～￣▽￣)～  
 ## 0. Group Infomation
 Student ID  | Student Name |  Github ID 
