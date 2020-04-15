@@ -74,7 +74,7 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 
 #### 1.1 Data Visualization
 
-balabala
+Firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features.
 
 #### 1.2 Data Cleaning
 
