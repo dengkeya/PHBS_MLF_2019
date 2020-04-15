@@ -67,3 +67,25 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 * The model is built based on the existing basic population attribute data, historical credit history, historical billing data and historical repayment data. According to the model, it can predict whether the credit card holder will repay the money on time next month. Essentially, it is a typical dichotomous problem.
 
 * Determine which variables are strong predictors of whether a customer is overdue, and compare the differences of prediction effects between different data processing methods and mathematical models.
+
+## 4. Modeling
+
+### Step 1. Data Visualization and Data Cleaning
+
+#### 1.1 Data Visualization
+
+balabala
+
+#### 1.2 Data Cleaning
+
+Balabala
+
+### Step 2. Features Selection
+
+### Step 3. Variable Correlation Analysis, Standardization & Dumb Coding
+
+### Step 4. Model Comparison
+
+### Step 5. Model Evaluation
+
+### Step 6. Model Optimization
