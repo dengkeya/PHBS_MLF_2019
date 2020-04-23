@@ -111,7 +111,7 @@ Based on the understanding of credit card business, we think the figures of Hist
 
 As for the feature Historical Payment Amount (*PAY_AMT1*,..., *PAY_AMT6*), we think they are highly correlated with the default status. The more stable of previous  repayment, the less likely default in the future owing to the consistent repayment behavior. In order to describe the fluctuation among different level, we use the variation coefficient instead of standard deviation. 
 
-The intermediate result of data cleaning and selection is saved in the [csv file](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Feature_Selection.csv).
+The intermediate result of data cleaning and selection is saved in [Feature_Selection.csv](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Feature_Selection.csv).
 
 ### Step 3. Variable Correlation Analysis, Standardization & Dumb Coding
 
