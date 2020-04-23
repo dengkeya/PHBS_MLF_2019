@@ -72,7 +72,7 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 
 ### Step 1. Data Visualization and Data Cleaning
 
-Befor using any model to predict, the first step is always explore what data we have. So we visualized the features we have and clean the original data. The relating code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
+Befor using any model to predict, the first step is always explore what data we have. So we visualized the features we have and clean the original data. The related code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
 
 #### 1.1 Data Visualization
 
