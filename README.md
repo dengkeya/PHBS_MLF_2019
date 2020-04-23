@@ -119,4 +119,7 @@ The intermediate result of data cleaning and selection is saved in [Feature_Sele
 
 ### Step 5. Model Evaluation
 
+#### 5.1 Variable Input Space
+In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 5 different input datasets. See the following table for specific data processing methods:
+
 ### Step 6. Model Optimization
