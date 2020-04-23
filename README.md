@@ -88,10 +88,30 @@ Also we noticed some outliers. For example, education 4,5,6 and marriage statues
 Considering some continuous variables such as balance limit and age do not make much difference from the discrete intervals. That is to say, the behaviors of customers in age 23 may not have too much difference from the behaviors of age 24. In order to avoid overfitting, we choose to discrete these two features. We set the bar width 50 thousand for balance limit and 10 years for age.
 
  The following chart shows how the features look after data cleaning.
- 
+
 <div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg"/></div>
 
 ### Step 2. Features Selection
+
+After data visualizing and cleaning, we want to select some features correlated to the real problem background.  The related code is [Part2_Feature_Selection.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Part2_Feature_Selection.ipynb).
+
+#### 2.1 Historical Credit Record
+
+As for the faeture Historical Credit Record (PAY_0, ..., PAY_6), if it’s a negative number, it means users pay early; 0 means users pay for the month bill on time. If positive, it means delayed payment. From the following point plot we can see that even if the bill is payed with 1 month delay, the risk of default is pretty low. However the relation between default and greater than or equal to 2 month delay pay is relatively high. Therefore, we tansform the original features into new binary variables: if PAY_i is smaller than 2, we divide it into *Paid*; otherwise *Delay*.
+
+<div align=center><img width="600" height="300" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/DefaultWithPaymentDelay.png"/></div>
+
+I’m not sure if you still remember this feature, pay_i（回到github）, if it’s a negative number, it means users pay early, 0 means user pay for the month bill on time. If positive, delayed payment. See this point plot. Even if the bill is payed with 1 month delay, the risk of default is pretty low. However the relation between default and more than 2 month delay pay is high. Therefore, we set pay-I as paid if it s smaller than 2 and delay if it larger than or equal to 2.
+
+####  2.2 Historical Bill Amount
+
+Based on the understanding of credit card business, we think the figures of Historical Bill Amount (*BILL_AMT1*,..., *BILL_AMT6*) themselves contains not so much information. However,  the ratio of last month's amount of bill statement to the amount of the given credit can influence this month's default probability. So we take this ratio into consideration and create a new feature: *Limit_Usage*. Since we are going to predict October's default probability, so we only take September's ratio.
+
+#### 2.3 Historical Payment Amount
+
+As for the feature Historical Payment Amount (*PAY_AMT1*,..., *PAY_AMT6*), we think they are highly correlated with the default status. The more stable of previous  repayment, the less likely default in the future owing to the consistent repayment behavior. In order to describe the fluctuation among different level, we use the variation coefficient instead of standard deviation. 
+
+The intermidate result of data cleaning and selection is saved in the [csv file](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Feature_Selection.csv).
 
 ### Step 3. Variable Correlation Analysis, Standardization & Dumb Coding
 
