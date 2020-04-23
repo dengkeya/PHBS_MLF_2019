@@ -72,15 +72,25 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 
 ### Step 1. Data Visualization and Data Cleaning
 
-Befor using any model to predict, the first step is always explore what data we have. So we visualize the features we have and clean the original data. The relating code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
+Befor using any model to predict, the first step is always explore what data we have. So we visualized the features we have and clean the original data. The relating code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
 
 #### 1.1 Data Visualization
 
-Firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features. 
+To understand the distribution better, firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features.  As is shown in the following figure, the balance limit varies from some thousand NTD to as much as a million. There are more female customers. The majority have a bachelor degree. 
+
+<img src="/Users/alexa/Downloads/Unknown-2.jpg" style="zoom:60%;" />
+
+
 
 #### 1.2 Data Cleaning
 
-Balabala
+Also we noticed some outliers. For example, education 4,5,6 and marriage statues, 0,3. They don’t have a realistic meaning and they only account for a very small proportion. Therefore we choose to delete them. Also, we delete sample older than 70 years.
+
+Considering some continuous variables such as balance limit and age do not make much difference from the discrete intervals. That is to say, the behaviors of customers in age 23 may not have too much difference from the behaviors of age 24. In order to avoid overfitting, we choose to discrete these two features. We set the bar width 50 thousand for balance limit and 10 years for age.
+
+ The following chart shows how the features look after data cleaning.
+
+<img src="/Users/alexa/Downloads/Unknown-2.jpg" style="zoom:60%;" />.
 
 ### Step 2. Features Selection
 
