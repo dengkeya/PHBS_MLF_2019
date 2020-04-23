@@ -90,7 +90,7 @@ Considering some continuous variables such as balance limit and age do not make 
 
  The following chart shows how the features look after data cleaning.
 
-**![image]**(https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg)
+![image](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg)
 
 ### Step 2. Features Selection
 
