@@ -89,8 +89,8 @@ Also we noticed some outliers. For example, education 4,5,6 and marriage statues
 Considering some continuous variables such as balance limit and age do not make much difference from the discrete intervals. That is to say, the behaviors of customers in age 23 may not have too much difference from the behaviors of age 24. In order to avoid overfitting, we choose to discrete these two features. We set the bar width 50 thousand for balance limit and 10 years for age.
 
  The following chart shows how the features look after data cleaning.
-
-![image](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg)
+ 
+<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg"/></div>
 
 ### Step 2. Features Selection
 
