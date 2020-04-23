@@ -78,8 +78,6 @@ Befor using any model to predict, the first step is always explore what data we 
 
 To understand the distribution better, firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features.  As is shown in the following figure, the balance limit varies from some thousand NTD to as much as a million. There are more female customers. The majority have a bachelor degree. 
 
-<img src="/Users/alexa/Downloads/Unknown-2.jpg" style="zoom:60%;" />
- 
 <div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/DataVisualization.jpg"/></div>
 
 
