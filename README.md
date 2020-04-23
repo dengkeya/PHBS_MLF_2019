@@ -129,4 +129,18 @@ In order to investigate the influence of different variable input spaces (i.e. d
 | Dataset 3 | Kick out irrelevant features + standardize  numerical features + discretization + selected 2 features. |
 | Dataset 4 | Kick out irrelevant features + standardize  numerical features + discretization + selected 2 features – features eliminated  by IV-WOE analysis. |
 
+#### 5.2 Comparison
+
+Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
+
+#### 5.3 Conclusion
+
 ### Step 6. Model Optimization
+
+#### 6.1 Feature Selection with Random Forrest
+
+Random forest can calculate the importance of features and thus can be used for feature selection to reduce dimensions and eliminate noises. We use random forest to sort the importance of features in dataset 3. 22 indicators with feature importance greater than 0.01 are selected.
+
+Performance of the four models are shown in the figure below:
+
+#### 6.2 Conclusion
