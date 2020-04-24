@@ -72,17 +72,46 @@ This dataset uses a binary variable, Default Payment (Yes = 1, No = 0), as the r
 
 ### Step 1. Data Visualization and Data Cleaning
 
-Befor using any model to predict, the first step is always explore what data we have. So we visualize the features we have and clean the original data. The relating code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
+Befor using any model to predict, the first step is always explore what data we have. So we visualized the features we have and clean the original data. The related code is [Part1_Data_Cleaning.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Data_Cleaning/Part1_Data_Cleaning.ipynb).
 
 #### 1.1 Data Visualization
 
-Firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features. 
+To understand the distribution better, firstly we visualize *Limit_Bal, Sex, Education, Marriage, Age* these five features.  As is shown in the following figure, the balance limit varies from some thousand NTD to as much as a million. There are more female customers. The majority have a bachelor degree. 
+
+<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/DataVisualization.jpg"/></div>
+
 
 #### 1.2 Data Cleaning
 
-Balabala
+Also we noticed some outliers. For example, education 4,5,6 and marriage statues, 0,3. They don’t have a realistic meaning and they only account for a very small proportion. Therefore we choose to delete them. Also, we delete sample older than 70 years.
+
+Considering some continuous variables such as balance limit and age do not make much difference from the discrete intervals. That is to say, the behaviors of customers in age 23 may not have too much difference from the behaviors of age 24. In order to avoid overfitting, we choose to discrete these two features. We set the bar width 50 thousand for balance limit and 10 years for age.
+
+ The following chart shows how the features look after data cleaning.
+
+<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AfterDataCleaning.jpg"/></div>
 
 ### Step 2. Features Selection
+
+After data visualizing and cleaning, we want to select some features correlated to the real problem background.  The related code is [Part2_Feature_Selection.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Part2_Feature_Selection.ipynb).
+
+#### 2.1 Historical Credit Record
+
+As for the faeture Historical Credit Record (PAY_0, ..., PAY_6), if it’s a negative number, it means users pay early; 0 means users pay for the month bill on time. If positive, it means delayed payment. From the following point plot we can see that even if the bill is payed with 1 month delay, the risk of default is pretty low. However the relation between default and greater than or equal to 2 month delay pay is relatively high. Therefore, we tansform the original features into new binary variables: if PAY_i is smaller than 2, we divide it into *Paid*; otherwise *Delay*.
+
+<div align=center><img width="600" height="300" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/DefaultWithPaymentDelay.png"/></div>
+
+I’m not sure if you still remember this feature, pay_i（回到github）, if it’s a negative number, it means users pay early, 0 means user pay for the month bill on time. If positive, delayed payment. See this point plot. Even if the bill is payed with 1 month delay, the risk of default is pretty low. However the relation between default and more than 2 month delay pay is high. Therefore, we set pay-I as paid if it s smaller than 2 and delay if it larger than or equal to 2.
+
+####  2.2 Historical Bill Amount
+
+Based on the understanding of credit card business, we think the figures of Historical Bill Amount (*BILL_AMT1*,..., *BILL_AMT6*) themselves contains not so much information. However,  the ratio of last month's amount of bill statement to the amount of the given credit can influence this month's default probability. So we take this ratio into consideration and create a new feature: *Limit_Usage*. Since we are going to predict October's default probability, so we only take September's ratio.
+
+#### 2.3 Historical Payment Amount
+
+As for the feature Historical Payment Amount (*PAY_AMT1*,..., *PAY_AMT6*), we think they are highly correlated with the default status. The more stable of previous  repayment, the less likely default in the future owing to the consistent repayment behavior. In order to describe the fluctuation among different level, we use the variation coefficient instead of standard deviation. 
+
+The intermediate result of data cleaning and selection is saved in [Feature_Selection.csv](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Feature_Selection/Feature_Selection.csv).
 
 ### Step 3. Variable Correlation Analysis, Standardization & Dumb Coding
 
@@ -157,4 +186,28 @@ The result of Step 3 are stored in data_standardized.csv & data_standardized_dum
 
 ### Step 5. Model Evaluation
 
+#### 5.1 Variable Input Space
+In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 5 different input datasets. See the following table for specific data processing methods:
+
+|   Input   |                   Data processing methods                    |
+| :-------: | :----------------------------------------------------------: |
+| Dataset 1 | Kick out irrelevant features + standardize  numerical features. |
+| Dataset 2 | Kick out irrelevant features + standardize  numerical features + discretization. |
+| Dataset 3 | Kick out irrelevant features + standardize  numerical features + discretization + selected 2 features. |
+| Dataset 4 | Kick out irrelevant features + standardize  numerical features + discretization + selected 2 features – features eliminated  by IV-WOE analysis. |
+
+#### 5.2 Comparison
+
+Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
+
+#### 5.3 Conclusion
+
 ### Step 6. Model Optimization
+
+#### 6.1 Feature Selection with Random Forrest
+
+Random forest can calculate the importance of features and thus can be used for feature selection to reduce dimensions and eliminate noises. We use random forest to sort the importance of features in dataset 3. 22 indicators with feature importance greater than 0.01 are selected.
+
+Performance of the four models are shown in the figure below:
+
+#### 6.2 Conclusion
