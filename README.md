@@ -101,8 +101,6 @@ As for the faeture Historical Credit Record (PAY_0, ..., PAY_6), if it’s a neg
 
 <div align=center><img width="600" height="300" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/DefaultWithPaymentDelay.png"/></div>
 
-I’m not sure if you still remember this feature, pay_i（回到github）, if it’s a negative number, it means users pay early, 0 means user pay for the month bill on time. If positive, delayed payment. See this point plot. Even if the bill is payed with 1 month delay, the risk of default is pretty low. However the relation between default and more than 2 month delay pay is high. Therefore, we set pay-I as paid if it s smaller than 2 and delay if it larger than or equal to 2.
-
 ####  2.2 Historical Bill Amount
 
 Based on the understanding of credit card business, we think the figures of Historical Bill Amount (*BILL_AMT1*,..., *BILL_AMT6*) themselves contains not so much information. However,  the ratio of last month's amount of bill statement to the amount of the given credit can influence this month's default probability. So we take this ratio into consideration and create a new feature: *Limit_Usage*. Since we are going to predict October's default probability, so we only take September's ratio.
