@@ -120,15 +120,16 @@ The intermediate result of data cleaning and selection is saved in [Feature_Sele
 The correlation analysis of single variable mainly analyzes the correlation between each independent variable and the dependent variable, and takes the variables with significant correlation as the input variable set of the model.
 Considering that the dependent variable is a fixed-type binary variable, IV and WOE were calculated for the type independent variable, and the independence test of Contingency Analysis was conducted.  For the numerical independent variable, the independence test of Variance Analysis was conducted.
 
-##### (1) Contingency Analysis  & IV-WOE Analysis with Categorical Variables
+##### **(1) Contingency Analysis  & IV-WOE Analysis with Categorical Variables**
 
- ##### Contingency Analysis
+- **Contingency Analysis**
 
 For categorical variables, we use Contingency Analysis to justify the relation with default condition. 
 
 When p-value < 0.05,  there is a significant relation between the variable and y. 
 
-##### IV-WOE Analysis
+- ##### **IV-WOE Analysis**
+
 
 IV is information value，and WOE is weight of evidence. They can be used to measure the predictive power of independent variables, such as Information Gain, Gini Coefficient and so on. Since this was mentioned in Professor's class and we had never use it, we decided to use IV-WOE to measure the predictive power of variables. 
 
@@ -151,7 +152,7 @@ Through Contingency Analysis, there is no indication that we need to eliminate v
 
 Here we select variables according to IV. The smaller IV is, the weaker the prediction power is. We will first consider deleting it. According to the calculation, we will delete MARRIAGE and SEX in dataset 4.
 
-##### (2) one-way ANOVA with Numerical Variables
+##### **(2) one-way ANOVA with Numerical Variables**
 
 For numerical variables, we use one-way ANOVA to justify the relation with default condition.
 
