@@ -86,6 +86,73 @@ Balabala
 
 ### Step 3. Variable Correlation Analysis, Standardization & Dumb Coding
 
+#### 3.1 Variable Correlation Analysis
+
+The correlation analysis of single variable mainly analyzes the correlation between each independent variable and the dependent variable, and takes the variables with significant correlation as the input variable set of the model.
+Considering that the dependent variable is a fixed-type binary variable, IV and WOE were calculated for the type independent variable, and the independence test of Contingency Analysis was conducted.  For the numerical independent variable, the independence test of Variance Analysis was conducted.
+
+##### (1) Contingency Analysis  & IV-WOE Analysis with Categorical Variables
+
+ ##### Contingency Analysis
+
+For categorical variables, we use Contingency Analysis to justify the relation with default condition. 
+
+When p-value < 0.05,  there is a significant relation between the variable and y. 
+
+##### IV-WOE Analysis
+
+IV is information value，and WOE is weight of evidence. They can be used to measure the predictive power of independent variables, such as Information Gain, Gini Coefficient and so on. Since this was mentioned in Professor's class and we had never use it, we decided to use IV-WOE to measure the predictive power of variables. 
+
+This is the calculation result:
+
+| categorical variable | IV       | WOE       | p-value       |
+| -------------------- | -------- | --------- | ------------- |
+| MARRIAGE             | 0.005798 | 0.008859  | 8.582062e-08  |
+| SEX                  | 0.008381 | 0.033757  | 3.148419e-11  |
+| EDUCATION            | 0.019753 | 0.050561  | 5.176524e-22  |
+| LIMIT_BAL_GROUP      | 0.156865 | -2.983032 | 1.260074e-161 |
+| PAY_6_TEST           | 0.281866 | 1.127477  | 0.000000e+00  |
+| PAY_5_TEST           | 0.329529 | 1.249417  | 0.000000e+00  |
+| PAY_4_TEST           | 0.348062 | 1.123734  | 0.000000e+00  |
+| PAY_3_TEST           | 0.407420 | 1.028289  | 0.000000e+00  |
+| PAY_2_TEST           | 0.546607 | 1.113845  | 0.000000e+00  |
+| PAY_0_TEST           | 0.716262 | 1.750558  | 0.000000e+00  |
+
+Through Contingency Analysis, there is no indication that we need to eliminate variables. 
+
+Here we select variables according to IV. The smaller IV is, the weaker the prediction power is. We will first consider deleting it. According to the calculation, we will delete MARRIAGE and SEX in dataset 4.
+
+##### (2) one-way ANOVA with Numerical Variables
+
+For numerical variables, we use one-way ANOVA to justify the relation with default condition.
+
+| numerical variable | p_value      |
+| ------------------ | ------------ |
+| PAY_AMT1           | 1.771477e-39 |
+| PAY_AMT2           | 4.625058e-25 |
+| PAY_AMT4           | 7.646590e-23 |
+| PAY_AMT3           | 1.156218e-22 |
+| PAY_AMT5           | 1.510917e-21 |
+| PAY_AMT6           | 1.519015e-20 |
+| BILL_AMT1          | 1.125713e-03 |
+| BILL_AMT2          | 1.977091e-02 |
+| BILL_AMT3          | 2.030948e-02 |
+| BILL_AMT4          | 1.032026e-01 |
+| BILL_AMT5          | 2.936431e-01 |
+| BILL_AMT6          | 4.064043e-01 |
+
+Under the significance level of 0.05, we kick out BILL_AMT4, BILL_AMT5, and BILL_AMT6 three continuous variables.
+
+#### 3.2 Data Standardization
+
+In order to eliminate the influence of dimension between variables and on model results, continuous variables  BILL_AMT1-6 & PAY_AMT1-6 are standardized.
+
+#### 3.3 Dumb Coding
+
+After significant correlation test + standardization + discretization,we get dummy coding of categorical data.
+
+The result of Step 3 are stored in data_standardized.csv & data_standardized_dumb.csv
+
 ### Step 4. Model Comparison
 
 ### Step 5. Model Evaluation
