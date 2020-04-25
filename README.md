@@ -220,7 +220,6 @@ In order to investigate the influence of different variable input spaces (i.e. d
 
 #### 5.2 Comparison
 
-Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
 Based on the AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
 
 <table class="tg">
@@ -332,3 +331,4 @@ We set different quantiles for cumulative importance, corresponding to different
 3. There is a very interesting finding of our project. Identity information, such as gender, marriage status and education level, doesn’t determine customer’s credit, while their past credit records make the difference. We can learn a lesson from this - don’t judge a man by his appearance  as only time reveals his heart. ^_^
 
     
+
