@@ -218,17 +218,6 @@ In order to investigate the influence of different variable input spaces (i.e. d
 
 Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-t87r{color:rgb(0, 0, 0);font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-8h9k{color:rgb(0, 0, 0);text-align:center;vertical-align:top}
-.tg .tg-gnn6{border-color:inherit;color:rgb(0, 0, 0);font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-9e4f{border-color:inherit;color:rgb(0, 0, 0);text-align:center;vertical-align:top}
-</style>
 <table class="tg">
   <tr>
     <th class="tg-9e4f"></th>
