@@ -205,7 +205,7 @@ Since our aim is to recognize the clients who are likely to default, we mainly f
 ### Step 5. Model Evaluation
 
 #### 5.1 Variable Input Space
-In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 5 different input datasets. The related code is [Model evaluation+Model optimization.ipynb]( https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb). See the following table for specific data processing methods:
+In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 4 different input datasets. The related code is [Model evaluation+Model optimization.ipynb]( https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb). See the following table for specific data processing methods:
 
 |   Input   |                   Data processing methods                    |
 | :-------: | :----------------------------------------------------------: |
@@ -305,7 +305,7 @@ Based on the AUC value indicators, the comparison of modeling with different var
 
 #### 5.3 Conclusion
 
-1. When comparing the four models, Random Forrest has the best prediction performance, with the highest precision score, recall rate, and F1 score.
+1. When comparing the four models, Random Forrest has the best prediction performance, with the highest precision score, recall rate, and F1 score. Even though Logistic Regression and Decision Tree have similar precision, recall rate of LR is much lower than that of Tree, indicating LR categorizes more customers to not default and Tree categorizes more customers to default. 
 2. When comparing the first 3 datasets, different data processing methods have no significant difference in prediction credit card default. There are 2 possible reasons: one is that the different features between datasets have poor ability to interpret the dependent variable; second is that input features are redundant. We will explain in detail in Step 6.
 3. The score drop from dataset 3 to dataset 4 is quite small, so removing *SEX* and *MARRIAGE* by IV analysis works.
 
