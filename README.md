@@ -323,6 +323,86 @@ Feature importance adds up to 1. We can see from the picture of cumulative impor
 
 We set different quantiles for cumulative importance, corresponding to different numbers of features, and examine prediction performance to test how much we can reduce the features without losing too much accuracy. Because Random Forest model outperform other models in our previous trial, we only examine the performance of the Random Forest model on decreasing features. The result is shown in the table below:
 
+<table class="tg">
+  <tr>
+    <th class="tg-amwm">cumulative importance</th>
+    <th class="tg-t87r">precision_score</th>
+    <th class="tg-t87r">recall</th>
+    <th class="tg-8h9k">f1_score</th>
+    <th class="tg-8h9k">num of features</th>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.1</td>
+    <td class="tg-61zd">0.77</td>
+    <td class="tg-8h9k">0.95</td>
+    <td class="tg-8h9k">0.85</td>
+    <td class="tg-8h9k">2</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.2</td>
+    <td class="tg-61zd">0.82</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.88</td>
+    <td class="tg-8h9k">3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.3</td>
+    <td class="tg-61zd">0.84</td>
+    <td class="tg-8h9k">0.95</td>
+    <td class="tg-8h9k">0.89</td>
+    <td class="tg-8h9k">5</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.4</td>
+    <td class="tg-61zd">0.85</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">6</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.5</td>
+    <td class="tg-61zd">0.86</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.91</td>
+    <td class="tg-8h9k">8</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.6</td>
+    <td class="tg-8h9k">0.87</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.92</td>
+    <td class="tg-8h9k">10</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.7</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.97</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">12</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.8</td>
+    <td class="tg-8h9k">0.89</td>
+    <td class="tg-8h9k">0.97</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">15</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0.9</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.97</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">24</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">41</td>
+  </tr>
+</table>
+
 #### 6.2 Conclusion
 
 1. Both the 2 selected features in Step 2, *Limit_Usage* and *Pay_Amt_std* , are among the most important features,  with importance value of 0.079926 and 0.065781 respectively. Therefore, in Step 5, that the modeling with dataset 3 fails to outperform modeling with dataset 2 can be attributed to redundant features nibble away the explanatory power of the 2 selected features. As for *LIMIT_BAL_GROUP*, its feature importance is the lowest. Therefore, neither the inclusion nor the exclusion of  *LIMIT_BAL_GROUP* affects model performance. Thus we can understand the outcome of Step 5 from the the perspective of feature importance.
