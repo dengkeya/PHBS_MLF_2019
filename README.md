@@ -187,7 +187,7 @@ We choose logistic regression, naive Bayes, decision tree and random forest to d
 
 The sample data is divided by stratified sampling. 80% is used as training data, and 20% is used as test data.  Given the imbalance of the sample data, we use resample to make the dataset balanced, which can help to improve the performance of models. 
 
-Since our aim is to recognize the clients who are likely to default, we mainly focus on the recall rate as well as F1 score when we evaluate the effectiveness of the models. 
+Since our aim is to recognize the clients who are likely to default, we mainly focus on the recall rate as well as F1 score when we evaluate the effectiveness of the models. From the charts below, it is shown that random forest works best among these four models.
 
 |                 |  Logistic Regression  |   Naive Bayes    |   Decision Tree   |   Random Forest    |
 |-----------------|-----------------------|------------------|-------------------|--------------------|
