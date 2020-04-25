@@ -218,6 +218,100 @@ In order to investigate the influence of different variable input spaces (i.e. d
 
 Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8h9k{color:rgb(0, 0, 0);text-align:center;vertical-align:top}
+.tg .tg-9e4f{border-color:inherit;color:rgb(0, 0, 0);text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-9e4f"></th>
+    <th class="tg-9e4f" colspan="3">Dataset 1</th>
+    <th class="tg-9e4f" colspan="3">Dataset 2</th>
+    <th class="tg-8h9k" colspan="3">Dataset 3</th>
+    <th class="tg-8h9k" colspan="3">Dataset 4</th>
+  </tr>
+  <tr>
+    <td class="tg-9e4f"></td>
+    <td class="tg-9e4f">precision</td>
+    <td class="tg-9e4f">recall</td>
+    <td class="tg-9e4f">f1_score</td>
+    <td class="tg-9e4f">precision</td>
+    <td class="tg-8h9k">recall</td>
+    <td class="tg-8h9k">f1_score</td>
+    <td class="tg-8h9k">precision</td>
+    <td class="tg-8h9k">recall</td>
+    <td class="tg-8h9k">f1_score</td>
+    <td class="tg-8h9k">precision</td>
+    <td class="tg-8h9k">recall</td>
+    <td class="tg-8h9k">f1_score</td>
+  </tr>
+  <tr>
+    <td class="tg-9e4f">Logistic&nbsp;&nbsp;&nbsp;Regression</td>
+    <td class="tg-9e4f">0.81</td>
+    <td class="tg-9e4f">0.51</td>
+    <td class="tg-9e4f">0.63</td>
+    <td class="tg-9e4f">0.8</td>
+    <td class="tg-8h9k">0.51</td>
+    <td class="tg-8h9k">0.63</td>
+    <td class="tg-8h9k">0.8</td>
+    <td class="tg-8h9k">0.52</td>
+    <td class="tg-8h9k">0.63</td>
+    <td class="tg-8h9k">0.79</td>
+    <td class="tg-8h9k">0.52</td>
+    <td class="tg-8h9k">0.63</td>
+  </tr>
+  <tr>
+    <td class="tg-9e4f">Naive Bayes</td>
+    <td class="tg-9e4f">0.76</td>
+    <td class="tg-9e4f">0.57</td>
+    <td class="tg-9e4f">0.65</td>
+    <td class="tg-9e4f">0.76</td>
+    <td class="tg-8h9k">0.56</td>
+    <td class="tg-8h9k">0.65</td>
+    <td class="tg-8h9k">0.76</td>
+    <td class="tg-8h9k">0.56</td>
+    <td class="tg-8h9k">0.65</td>
+    <td class="tg-8h9k">0.76</td>
+    <td class="tg-8h9k">0.56</td>
+    <td class="tg-8h9k">0.65</td>
+  </tr>
+  <tr>
+    <td class="tg-8h9k">Decision Tree</td>
+    <td class="tg-8h9k">0.81</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.88</td>
+    <td class="tg-8h9k">0.81</td>
+    <td class="tg-8h9k">0.95</td>
+    <td class="tg-8h9k">0.87</td>
+    <td class="tg-8h9k">0.81</td>
+    <td class="tg-8h9k">0.94</td>
+    <td class="tg-8h9k">0.87</td>
+    <td class="tg-8h9k">0.82</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.88</td>
+  </tr>
+  <tr>
+    <td class="tg-8h9k">Random Forest</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">0.9</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.93</td>
+    <td class="tg-8h9k">0.89</td>
+    <td class="tg-8h9k">0.96</td>
+    <td class="tg-8h9k">0.93</td>
+  </tr>
+</table>
+
 #### 5.3 Conclusion
 
 ### Step 6. Model Optimization
