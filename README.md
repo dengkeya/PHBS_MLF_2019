@@ -224,34 +224,36 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-t87r{color:rgb(0, 0, 0);font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-8h9k{color:rgb(0, 0, 0);text-align:center;vertical-align:top}
+.tg .tg-gnn6{border-color:inherit;color:rgb(0, 0, 0);font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-9e4f{border-color:inherit;color:rgb(0, 0, 0);text-align:center;vertical-align:top}
 </style>
 <table class="tg">
   <tr>
     <th class="tg-9e4f"></th>
-    <th class="tg-9e4f" colspan="3">Dataset 1</th>
-    <th class="tg-9e4f" colspan="3">Dataset 2</th>
-    <th class="tg-8h9k" colspan="3">Dataset 3</th>
-    <th class="tg-8h9k" colspan="3">Dataset 4</th>
+    <th class="tg-gnn6" colspan="3">Dataset 1</th>
+    <th class="tg-gnn6" colspan="3">Dataset 2</th>
+    <th class="tg-t87r" colspan="3">Dataset 3</th>
+    <th class="tg-t87r" colspan="3">Dataset 4</th>
   </tr>
   <tr>
     <td class="tg-9e4f"></td>
-    <td class="tg-9e4f">precision</td>
-    <td class="tg-9e4f">recall</td>
-    <td class="tg-9e4f">f1_score</td>
-    <td class="tg-9e4f">precision</td>
-    <td class="tg-8h9k">recall</td>
-    <td class="tg-8h9k">f1_score</td>
-    <td class="tg-8h9k">precision</td>
-    <td class="tg-8h9k">recall</td>
-    <td class="tg-8h9k">f1_score</td>
-    <td class="tg-8h9k">precision</td>
-    <td class="tg-8h9k">recall</td>
-    <td class="tg-8h9k">f1_score</td>
+    <td class="tg-gnn6">precision</td>
+    <td class="tg-gnn6">recall</td>
+    <td class="tg-gnn6">f1_score</td>
+    <td class="tg-gnn6">precision</td>
+    <td class="tg-t87r">recall</td>
+    <td class="tg-t87r">f1_score</td>
+    <td class="tg-t87r">precision</td>
+    <td class="tg-t87r">recall</td>
+    <td class="tg-t87r">f1_score</td>
+    <td class="tg-t87r">precision</td>
+    <td class="tg-t87r">recall</td>
+    <td class="tg-t87r">f1_score</td>
   </tr>
   <tr>
-    <td class="tg-9e4f">Logistic&nbsp;&nbsp;&nbsp;Regression</td>
+    <td class="tg-gnn6">Logistic&nbsp;&nbsp;&nbsp;Regression</td>
     <td class="tg-9e4f">0.81</td>
     <td class="tg-9e4f">0.51</td>
     <td class="tg-9e4f">0.63</td>
@@ -266,7 +268,7 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
     <td class="tg-8h9k">0.63</td>
   </tr>
   <tr>
-    <td class="tg-9e4f">Naive Bayes</td>
+    <td class="tg-gnn6">Naive Bayes</td>
     <td class="tg-9e4f">0.76</td>
     <td class="tg-9e4f">0.57</td>
     <td class="tg-9e4f">0.65</td>
@@ -281,7 +283,7 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
     <td class="tg-8h9k">0.65</td>
   </tr>
   <tr>
-    <td class="tg-8h9k">Decision Tree</td>
+    <td class="tg-t87r">Decision Tree</td>
     <td class="tg-8h9k">0.81</td>
     <td class="tg-8h9k">0.96</td>
     <td class="tg-8h9k">0.88</td>
@@ -296,7 +298,7 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
     <td class="tg-8h9k">0.88</td>
   </tr>
   <tr>
-    <td class="tg-8h9k">Random Forest</td>
+    <td class="tg-t87r">Random Forest</td>
     <td class="tg-8h9k">0.9</td>
     <td class="tg-8h9k">0.96</td>
     <td class="tg-8h9k">0.93</td>
