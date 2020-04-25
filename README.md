@@ -183,12 +183,20 @@ The result of Step 3 are stored in data_standardized.csv & data_standardized_dum
 
 ### Step 4. Model Comparison
 
-We choose logistic regression, naive Bayes, decision tree and random forest to do the modeling. Grid search is used in order to find the optimal hyperparameters. The related code is [Part4. Model Comparison.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20comparison/Model%20Comparison.ipynb).
+We choose logistic regression, naive Bayes, decision tree and random forest to do the modeling. Grid search is used in order to find the optimal hyperparameters. The related code is [Part4_Model_Comparison.ipynb](https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20comparison/Model%20Comparison.ipynb).
 
 The sample data is divided by stratified sampling. 80% is used as training data, and 20% is used as test data.  Given the imbalance of the sample data, we use resample to make the dataset balanced, which can help to improve the performance of models. 
 
 Since our aim is to recognize the clients who are likely to default, we mainly focus on the recall rate as well as F1 score when we evaluate the effectiveness of the models. 
 
+                 |  Logistic Regression  |   Naive Bayes    |   Decision Tree   |   Random Forest
+-----------------|-----------------------|------------------|-------------------|--------------------
+Accuracy (Train) |0.70                   |0.69              |0.86               |0.92
+Accuracy (Test)  |0.70                   |0.69              |0.87               |0.93
+Precision        |0.80                   |0.76              |0.83               |0.91
+Recall           |0.53                   |0.55              |0.95               |0.96
+F1-score         |0.64                   |0.64              |0.88               |0.93
+Parameters       |{'C':0.01}             |{}                |{'criterion': 'gini', 'max_depth': 25}|{'criterion': 'gini', 'max_depth': 25, 'n_estimators': 30}
 
 
 ### Step 5. Model Evaluation
