@@ -319,7 +319,7 @@ In Step 5, we find out that different data processing methods have little influe
 
 Feature importance adds up to 1. We can see from the picture of cumulative importance that the least important 20 features only account for less than 20% importance, which indicates feature redundant.
 
-<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/cumulative importance.png"/></div>
+<div align=center><img width="500" height="300" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/cumulative importance.png"/></div>
 
 We set different quantiles for cumulative importance, corresponding to different numbers of features, and examine prediction performance to test how much we can reduce the features without losing too much accuracy. Because Random Forest model outperform other models in our previous trial, we only examine the performance of the Random Forest model on decreasing features. The result is shown in the table below:
 
