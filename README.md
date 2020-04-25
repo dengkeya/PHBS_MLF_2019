@@ -221,6 +221,7 @@ In order to investigate the influence of different variable input spaces (i.e. d
 #### 5.2 Comparison
 
 Based on the accuracy and AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
+Based on the AUC value indicators, the comparison of modeling with different variable inputs is shown in the table below:
 
 <table class="tg">
   <tr>
@@ -309,15 +310,25 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
 #### 5.3 Conclusion
 
 1. When comparing the four models, Random Forrest has the best prediction performance, with the highest precision score, recall rate, and F1 score.
-
-2. When comparing the four datasets, different data processing methods have no significant difference in prediction credit card default. There are 2 possible reasons: one is that the different features between datasets have poor ability to interpret the dependent variable; second is that input features are redundant. We will explain in detail in Section 6.
+2. When comparing the first 3 datasets, different data processing methods have no significant difference in prediction credit card default. There are 2 possible reasons: one is that the different features between datasets have poor ability to interpret the dependent variable; second is that input features are redundant. We will explain in detail in Step 6.
+3. The score drop from dataset 3 to dataset 4 is quite small, so removing *SEX* and *MARRIAGE* by IV analysis works.
 
 ### Step 6. Model Optimization
 
 #### 6.1 Feature Selection with Random Forrest
 
-Random forest can calculate the importance of features and thus can be used for feature selection to reduce dimensions and eliminate noises. We use random forest to sort the importance of features in dataset 3. 22 indicators with feature importance greater than 0.01 are selected.
+In Step 5, we find out that different data processing methods have little influence on model performance. To further understand the reasons, we deploy Random forest to calculate the importance of features  for feature selection to reduce dimensions and eliminate noises. We sort the importance of features in dataset 3.  
 
-Performance of the four models are shown in the figure below:
+Feature importance adds up to 1. We can see from the picture of cumulative importance that the least important 20 features only account for less than 20% importance, which indicates feature redundant.
+
+We set different quantiles for cumulative importance, corresponding to different numbers of features, and examine prediction performance to test how much we can reduce the features without losing too much accuracy. Because Random Forest model outperform other models in our previous trial, we only examine the performance of the Random Forest model on decreasing features. The result is shown in the table below:
 
 #### 6.2 Conclusion
+
+1. Both the 2 selected features in Step 2, *Limit_Usage* and *Pay_Amt_std* , are among the most important features,  with importance value of ** and ** respectively. Therefore, in Step 5, that the modeling with dataset 3 fails to outperform modeling with dataset 2 can be attributed to redundant features nibble away the explanatory power of the 2 selected features. As for *LIMIT_BAL_GROUP*, its feature importance is the lowest. Therefore, neither the inclusion nor the exclusion of  *LIMIT_BAL_GROUP* affects model performance. Thus we can understand the outcome of Step 5 from the the perspective of feature importance.
+
+2. We continuously reduce the number of features according to their feature importance from the smallest to the largest and find that at the ** quantile, corresponding to ** features, the model's prediction performance doesn’t significantly deteriorate, so we successfully removed nearly half of the features. According to this model, some important features to predict customers repayment behaviors are: 
+
+3. There is a very interesting finding of our project. Identity information, such as gender, marriage status and education level, doesn’t determine customer’s credit, while their past credit records make the difference. We can learn a lesson from this - don’t judge a man by his appearance  as only time reveals his heart. ^_^
+
+    
