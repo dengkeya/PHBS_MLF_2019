@@ -183,6 +183,15 @@ The result of Step 3 are stored in data_standardized.csv & data_standardized_dum
 
 ### Step 4. Model Comparison
 
+We choose logistic regression, naive Bayes, decision tree and random forest to do the modeling. Grid search is used in order to find the optimal hyperparameters. The related code is [Part4. Model Comparison.ipynb]
+(https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20comparison/Model%20Comparison.ipynb).
+
+The sample data is divided by stratified sampling. 80% is used as training data, and 20% is used as test data.  Given the imbalance of the sample data, we use resample to make the dataset balanced, which can help to improve the performance of models. 
+
+Since our aim is to recognize the clients who are likely to default, we mainly focus on the recall rate as well as F1 score when we evaluate the effectiveness of the models. 
+
+
+
 ### Step 5. Model Evaluation
 
 #### 5.1 Variable Input Space
