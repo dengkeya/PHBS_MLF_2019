@@ -189,14 +189,14 @@ The sample data is divided by stratified sampling. 80% is used as training data,
 
 Since our aim is to recognize the clients who are likely to default, we mainly focus on the recall rate as well as F1 score when we evaluate the effectiveness of the models. 
 
-                 |  Logistic Regression  |   Naive Bayes    |   Decision Tree   |   Random Forest
------------------|-----------------------|------------------|-------------------|--------------------
-Accuracy (Train) |0.70                   |0.69              |0.86               |0.92
-Accuracy (Test)  |0.70                   |0.69              |0.87               |0.93
-Precision        |0.80                   |0.76              |0.83               |0.91
-Recall           |0.53                   |0.55              |0.95               |0.96
-F1-score         |0.64                   |0.64              |0.88               |0.93
-Parameters       |{'C':0.01}             |{}                |{'criterion': 'gini', 'max_depth': 25}|{'criterion': 'gini', 'max_depth': 25, 'n_estimators': 30}
+|                 |  Logistic Regression  |   Naive Bayes    |   Decision Tree   |   Random Forest    |
+|-----------------|-----------------------|------------------|-------------------|--------------------|
+|Accuracy (Train) |0.70                   |0.69              |0.86               |0.92                |
+|Accuracy (Test)  |0.70                   |0.69              |0.87               |0.93                |
+|Precision        |0.80                   |0.76              |0.83               |0.91                |
+|Recall           |0.53                   |0.55              |0.95               |0.96                |
+|F1-score         |0.64                   |0.64              |0.88               |0.93                |
+|Parameters       |{'C':0.01}             |{}                |{'criterion': 'gini', 'max_depth': 25}|{'criterion': 'gini', 'max_depth': 25, 'n_estimators': 30}|
 
 
 ### Step 5. Model Evaluation
