@@ -205,7 +205,11 @@ Since our aim is to recognize the clients who are likely to default, we mainly f
 ### Step 5. Model Evaluation
 
 #### 5.1 Variable Input Space
-In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 5 different input datasets. See the following table for specific data processing methods:
+In order to investigate the influence of different variable input spaces (i.e. different data processing methods) to the model, we set up 5 different input datasets. The related code is 
+
+[Model evaluation+Model optimization.ipynb]: https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb
+
+. See the following table for specific data processing methods:
 
 |   Input   |                   Data processing methods                    |
 | :-------: | :----------------------------------------------------------: |
