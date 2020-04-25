@@ -198,7 +198,7 @@ Since our aim is to recognize the clients who are likely to default, we mainly f
 |F1-score         |0.64                   |0.64              |0.88               |0.93                |
 |Parameters       |{'C':0.01}             |{}                |{'criterion': 'gini', 'max_depth': 25}|{'criterion': 'gini', 'max_depth': 25, 'n_estimators': 30}|
 
-<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AUC%20of%20Algorithms.png"/></div>
+<div align=center><img width="800" height="500" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/AUC%20of%20Algorithms.png"/></div>
 
 <div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/Comparison%20of%20Algorithms.png"/></div>
 
