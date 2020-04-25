@@ -313,17 +313,48 @@ Based on the AUC value indicators, the comparison of modeling with different var
 
 #### 6.1 Feature Selection with Random Forrest
 
-In Step 5, we find out that different data processing methods have little influence on model performance. To further understand the reasons, we deploy Random forest to calculate the importance of features  for feature selection to reduce dimensions and eliminate noises. We sort the importance of features in dataset 3.  
+In Step 5, we find out that different data processing methods have little influence on model performance. To further understand the reasons, we deploy Random forest to calculate the importance of features  for feature selection to reduce dimensions and eliminate noises. The related code is [Model evaluation+Model optimization.ipynb]( https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb). We sort the importance of features in dataset 3.  
+
+<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/Feature importances for RF.png"/></div>
 
 Feature importance adds up to 1. We can see from the picture of cumulative importance that the least important 20 features only account for less than 20% importance, which indicates feature redundant.
+
+<div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/cumulative importance.png"/></div>
 
 We set different quantiles for cumulative importance, corresponding to different numbers of features, and examine prediction performance to test how much we can reduce the features without losing too much accuracy. Because Random Forest model outperform other models in our previous trial, we only examine the performance of the Random Forest model on decreasing features. The result is shown in the table below:
 
 #### 6.2 Conclusion
 
-1. Both the 2 selected features in Step 2, *Limit_Usage* and *Pay_Amt_std* , are among the most important features,  with importance value of ** and ** respectively. Therefore, in Step 5, that the modeling with dataset 3 fails to outperform modeling with dataset 2 can be attributed to redundant features nibble away the explanatory power of the 2 selected features. As for *LIMIT_BAL_GROUP*, its feature importance is the lowest. Therefore, neither the inclusion nor the exclusion of  *LIMIT_BAL_GROUP* affects model performance. Thus we can understand the outcome of Step 5 from the the perspective of feature importance.
+1. Both the 2 selected features in Step 2, *Limit_Usage* and *Pay_Amt_std* , are among the most important features,  with importance value of 0.079926 and 0.065781 respectively. Therefore, in Step 5, that the modeling with dataset 3 fails to outperform modeling with dataset 2 can be attributed to redundant features nibble away the explanatory power of the 2 selected features. As for *LIMIT_BAL_GROUP*, its feature importance is the lowest. Therefore, neither the inclusion nor the exclusion of  *LIMIT_BAL_GROUP* affects model performance. Thus we can understand the outcome of Step 5 from the the perspective of feature importance.
 
-2. We continuously reduce the number of features according to their feature importance from the smallest to the largest and find that at the ** quantile, corresponding to ** features, the model's prediction performance doesn’t significantly deteriorate, so we successfully removed nearly half of the features. According to this model, some important features to predict customers repayment behaviors are: 
+2. We continuously reduce the number of features according to their feature importance from the smallest to the largest and find that at the 0.7 quantile, corresponding to 12 features, the model's prediction performance doesn’t significantly deteriorate, so we successfully removed nearly half of the features. According to this model, some important features to predict customers repayment behaviors are: 
+
+<table class="tg">
+  <tr>
+    <th class="tg-t87r">Features</th>
+    <th class="tg-t87r">Explanation</th>
+  </tr>
+  <tr>
+    <td class="tg-61zd">Limit_Usage</td>
+    <td class="tg-8h9k">How much credit customer used in the most recent month.</td>
+  </tr>
+  <tr>
+    <td class="tg-61zd">Pay_Amt_std</td>
+    <td class="tg-8h9k">Whether the repayment behaviour of the customer is consistent.</td>
+  </tr>
+  <tr>
+    <td class="tg-61zd">BILL_AMT1, BILL_AMT2,&nbsp;&nbsp;&nbsp;BILL_AMT3</td>
+    <td class="tg-8h9k">Bill amount of last 3 months. </td>
+  </tr>
+  <tr>
+    <td class="tg-61zd">PAY_AMT1, …, PAY_AMT6 </td>
+    <td class="tg-8h9k">Repayment amount of last 6 month.</td>
+  </tr>
+  <tr>
+    <td class="tg-61zd">PAY_0_TEST</td>
+    <td class="tg-8h9k">Whether customer delayed his most recent bill.</td>
+  </tr>
+</table>
 
 3. There is a very interesting finding of our project. Identity information, such as gender, marriage status and education level, doesn’t determine customer’s credit, while their past credit records make the difference. We can learn a lesson from this - don’t judge a man by his appearance  as only time reveals his heart. ^_^
 
