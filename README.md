@@ -306,8 +306,11 @@ Based on the accuracy and AUC value indicators, the comparison of modeling with 
     <td class="tg-8h9k">0.93</td>
   </tr>
 </table>
-
 #### 5.3 Conclusion
+
+1. When comparing the four models, Random Forrest has the best prediction performance, with the highest precision score, recall rate, and F1 score.
+
+2. When comparing the four datasets, different data processing methods have no significant difference in prediction credit card default. There are 2 possible reasons: one is that the different features between datasets have poor ability to interpret the dependent variable; second is that input features are redundant. We will explain in detail in Section 6.
 
 ### Step 6. Model Optimization
 
