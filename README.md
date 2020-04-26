@@ -313,7 +313,7 @@ Based on the AUC value indicators, the comparison of modeling with different var
 
 #### 6.1 Feature Selection with Random Forrest
 
-In Step 5, we find out that different data processing methods have little influence on model performance. To further understand the reasons, we deploy Random Forest to calculate the importance of features  for feature selection to reduce dimensions and eliminate noises. The related code is [Model evaluation+Model optimization.ipynb]( https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb)(The running time of this piece of code will be a little bit long, slightly more than one hour. Sorry about that.). We sort the importance of features in dataset 3.  
+In Step 5, we find out that different data processing methods have little influence on model performance. To further understand the reasons, we deploy Random Forest to calculate the importance of features  for feature selection to reduce dimensions and eliminate noises. The related code is [Model evaluation+Model optimization.ipynb]( https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/Model%20evaluation%20%2B%20Model%20optimization/Model%20evaluation%2BModel%20optimization.ipynb) (The running time of this piece of code will be a little bit long, slightly more than one hour. Sorry about that.). We sort the importance of features in dataset 3.  
 
 <div align=center><img width="500" height="600" src="https://github.com/dengkeya/PHBS_MLF_2019/blob/master/project/charts/Feature importances for RF.png"/></div>
 
